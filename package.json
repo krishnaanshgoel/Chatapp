@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "install": "npm uninstall react react-dom && npm install react@18 react-dom@18 && npm i stream-chat stream-chat-react && npm install @clerk/nextjs",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
