@@ -1,101 +1,118 @@
 import Image from "next/image";
+import Head from "next/head"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+<>
+      <Head>
+        <title>ChatApp - Connect Instantly</title>
+        <meta name="description" content="ChatApp - The best way to stay connected with your friends and family." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="bg-gray-50 min-h-screen">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col-reverse lg:flex-row items-center justify-between py-20">
+              {/* Left Content */}
+              <div className="text-center lg:text-left">
+                <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
+                  Connect with the World <br />
+                  <span className="text-yellow-300">Anytime, Anywhere</span>
+                </h1>
+                <p className="mt-4 text-lg sm:text-xl text-gray-100">
+                  ChatApp makes it easy to stay connected with your loved ones, colleagues, and communities. 
+                  Fast, secure, and user-friendly.
+                </p>
+                <div className="mt-6 flex justify-center lg:justify-start space-x-4">
+                  <a
+                    href="https://growing-mite-98.accounts.dev/sign-up"
+                    className="px-6 py-3 bg-yellow-300 text-gray-900 font-medium rounded-lg shadow-md hover:bg-yellow-400"
+                  >
+                    Get Started
+                  </a>
+                  <a
+                    href="/features"
+                    className="px-6 py-3 bg-gray-100 text-blue-600 font-medium rounded-lg shadow-md hover:bg-gray-200"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Image */}
+              <div className="mt-10 lg:mt-0">
+                <Image
+                  src="/chatapplogo.jpg" // Replace with your own image or illustration
+                  alt="ChatApp Hero Illustration"
+                  width={200}
+                  height={200}
+                  className="w-full max-w-lg mx-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-800 text-center">
+              Why Choose ChatApp?
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 text-center">
+              Discover the features that make ChatApp the best choice for seamless communication.
+            </p>
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center">
+                <Image
+                  src="/instantmessaging.jpeg"
+                  alt="Feature 1"
+                  height={40}
+                  width={40}
+                  className="w-16 h-16 mx-auto"
+                />
+                <h3 className="mt-4 text-xl font-semibold text-gray-800">Instant Messaging</h3>
+                <p className="mt-2 text-gray-600">
+                  Chat with friends and family in real-time with blazing fast speed.
+                </p>
+              </div>
+              <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center">
+                <Image
+                  src="/secureimage.png"
+                  alt="Feature 2"
+                  height={40}
+                  width={40}
+                  className="w-16 h-16 mx-auto"
+                />
+                <h3 className="mt-4 text-xl font-semibold text-gray-800">Secure Conversations</h3>
+                <p className="mt-2 text-gray-600">
+                  End-to-end encryption ensures your chats are safe and private.
+                </p>
+              </div>
+              <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center">
+                <Image
+                  src="/groupchat.jpg"
+                  alt="Feature 3"
+                  height={40}
+                  width={40}
+                  className="w-16 h-16 mx-auto"
+                />
+                <h3 className="mt-4 text-xl font-semibold text-gray-800">Group Chats</h3>
+                <p className="mt-2 text-gray-600">
+                  Create and manage groups for seamless collaboration and fun.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
+}
+
+export const metadata={
+   title:'Home - Chatapp',
+   description:"Chatapp helps you connect with people"
 }
