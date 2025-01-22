@@ -25,12 +25,13 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/krishnaanshgoel/Chatapp.git
    cd Chatapp
+   ```
 2.Install the dependencies:
   ```bash
   npm install
-```
+  ```
 3.Start the development server
   ```bash
   npm run dev
-```
+  ```
 
