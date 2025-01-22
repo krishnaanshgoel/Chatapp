@@ -1,5 +1,7 @@
 # ChatApp
 
+[Link to the Website](https://chatapp-f93q.vercel.app)
+
 ChatApp is a real-time messaging platform built using **Next.js** and **Clerk** for authentication. The app allows users to join multiple forums and chat with others on topics related to each forum.
 
 ## Features
@@ -23,3 +25,12 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/krishnaanshgoel/Chatapp.git
    cd Chatapp
+2.Install the dependencies:
+```bash
+   npm install
+```
+3.Start the development server
+```bash
+npm run dev
+```
+
